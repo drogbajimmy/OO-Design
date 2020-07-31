@@ -1,18 +1,26 @@
 package shape;
 
-import aspect.Draw;
-import org.springframework.stereotype.Component;
+/**
+ * Circle class
+ *
+ * @author  Jimmy Zhou
+ * @version 1.0
+ * @since   2020-07-31
+ */
+public class Circle extends Shape {
 
-@Component
-public class Circle implements Shape {
-
-    public Circle() {
-
-    }
+    private double radius;
 
     @Override
-    @Draw
-    public void draw() {
-        System.out.println("Circle draw() execution");
+    public void performDrawing() {
+        System.out.println("Circle performDrawing() execution");
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 }

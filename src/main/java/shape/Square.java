@@ -1,18 +1,26 @@
 package shape;
 
-import aspect.Draw;
-import org.springframework.stereotype.Component;
+/**
+ * Square class
+ *
+ * @author  Jimmy Zhou
+ * @version 1.0
+ * @since   2020-07-31
+ */
+public class Square extends Shape {
 
-@Component
-public class Square implements Shape {
-
-    public Square() {
-
-    }
+    private double side;
 
     @Override
-    @Draw
-    public void draw() {
-        System.out.println("Square draw() execution");
+    public void performDrawing() {
+        System.out.println("Square performDrawing() execution");
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    public void setSide(double side) {
+        this.side = side;
     }
 }
